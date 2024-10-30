@@ -11,12 +11,16 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="./public/css/output.css">
 
 </head>
 
-<body class="flex items-center justify-center h-screen bg-gray-200 dark:bg-slate-900 popins">
-  <div class="bodyCalc sm:max-w-xs w-full sm:max-h-[560px] h-full  bg-bodyLinear sm:rounded-3xl shadow-2xl dark:shadow-2xl text-nowrap">
+<body class="flex items-center justify-center h-screen bg-gray-200 dark:bg-slate-900 popins overflow-hidden">
+  <div class="bodyCalc sm:max-w-xs w-full sm:max-h-[560px] h-screen  bg-bodyLinear sm:rounded-3xl shadow-2xl dark:shadow-2xl text-nowrap">
     <!-- Display -->
     <div class="w-full flex justify-between p-4 text-md items-center">
       <button onclick="hideBtn(this)" class="uil uil-redo dark:text-slate-50 font-medium">
@@ -63,7 +67,7 @@
     </div>
 
     <!-- history start -->
-    <div class="historySection hidden">
+    <div class="historySection hidden animate__animated animate__fadeInDown">
       <h1 class="text-md font-medium px-4 pb-4 dark:text-slate-50">history:</h1>
       <div class="history px-5 break-words text-wrap dark:text-slate-50 font-medium text-base overflow-hidden"></div>
     </div>
@@ -80,12 +84,12 @@
     <!-- result end -->
     
     <!--  Buttons start -->
-    <div class="w-full displayCal flex sm:static absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm">
+    <div class="w-full displayCal flex sm:static absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm  animate__animated animate__fadeInUp">
       <div class="grid grid-cols-3 gap-2 rounded-2xl sm:w-[80%] w-[90%] p-4 sm:ml-0 ml-4">
         <div class="flex col-span-3 justify-between sm:w-[214px] w-full rounded-full bg-white/[30%] dark:bg-black/[30%]">
           <button class="cardAction" onclick="removeNumber()">AC</button>
-          <button class="cardAction">+/-</button>
           <button class="cardAction" onclick="calculatePercentage()">%</button>
+          <button class="cardAction"onclick="backspaceBtn()"><i class="uil uil-backspace text-2xl"></i></button>
         </div>
 
         <button class="cardNumber" onclick="setNumber('7')">7</button>
@@ -116,7 +120,7 @@
       </div>
     </div>
   </div>
-  <script src="./src/js/main.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>

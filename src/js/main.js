@@ -159,7 +159,7 @@ function hideBtn(e){
   if(e.classList.contains('uil-redo')){
     e.classList.replace('uil-redo','uil-times');
   }else{
-    e.classList.replace('uil-times','uil-redo')
+    e.classList.replace('uil-times','uil-redo');
   }
   displayCal.classList.toggle("hidden");
 
@@ -172,3 +172,9 @@ function hideBtn(e){
 function formatNumber(number){
   return parseFloat(number).toLocaleString('en-US');
 }
+
+function backspaceBtn(){
+  currentNumber = currentNumber.slice(0,-1) || "0";
+
+  displayValue();
+} 
