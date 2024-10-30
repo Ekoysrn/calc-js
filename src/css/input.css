@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-linear{
+  background: linear-gradient(
+  to bottom left,#79AFFF 35%, #5ACEFF 72%,#9EE8FF 100%              
+);
+}
+
+.bg-darklinear{
+  background: linear-gradient(to bottom left, #224E91 35%,#2A7DA1 72%, #00123F 100%);
+}
+
+.bg-bodyLinear{
+  background:linear-gradient(to bottom right, #FEFEFE 0%, #F3F3F3 33%, #E5E5E5 100%)
+}
+
+.bg-bodyDarkLinear{
+  background:linear-gradient(to bottom right, #373737 0%, #252628 23%, #000309 100%)
+}
+
+.cardNumber{
+  @apply bg-white/[30%] dark:bg-black/[30%] dark:text-slate-50 text-gray-800 size-[64px] rounded-full font-semibold hover:bg-white/[20%]  
+}
+
+.cardAction{
+  @apply text-gray-800 dark:text-slate-50 size-[64px] rounded-full font-semibold hover:bg-white/[20%]
+}
+
+.activeDark{
+  @apply bg-[#D8EEFF] dark:bg-[#003661]
+}
+
+
+.popins{
+  font-family: "Poppins", sans-serif;
+}
+
+.card{
+  @apply bg-[#373737]
+}
