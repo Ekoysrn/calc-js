@@ -15,15 +15,16 @@ const equals = document.querySelector('.equals');
 
 
 function displayValue(e) {
+
   if(e === undefined){
-    currentNumberContent.textContent = currentNumber;
+    currentNumberContent.textContent = formatNumber(currentNumber);
   }else{
-    currentNumberContent.textContent = e;
+    currentNumberContent.textContent = e
   }
 }
 
 function equalValue(){
-  resultContent.textContent = displayCalc;
+  resultContent.textContent = formatNumber(displayCalc);
 }
 
 function setNumber(number) {
@@ -68,7 +69,8 @@ function calculate() {
     displayCalc = currentNumber;
   }
 
-  let dis = `${displayFirstNum} ${displayOperator} ${displaySecondNum}`
+  let dis = `${formatNumber(displayFirstNum)} ${displayOperator} ${formatNumber(displaySecondNum)}`;
+
   viewHistory(firstNumber,secondNumber,operator,currentNumber)
 
   
@@ -129,11 +131,10 @@ checkDarkMode.addEventListener("click",function(){
 
 
 function viewHistory(firstNum,secondNum,operator,result){
-  let historyResult = `${firstNum} ${operator} ${secondNum} = ${result}`;
+  let historyResult = `${formatNumber(firstNum)} ${operator} ${formatNumber(secondNum)} = ${formatNumber(result)}`;
   
   if(firstNum != null && secondNum != null && operator != null){
     historyItem.push(historyResult);
-    console.log(historyItem);
     textHistory();
   }
 }
@@ -166,4 +167,8 @@ function hideBtn(e){
   resultContent.classList.toggle("hidden");
   equals.classList.add("hidden");
   sectionHistory.classList.toggle("hidden");
+}
+
+function formatNumber(number){
+  return parseFloat(number).toLocaleString('en-US');
 }

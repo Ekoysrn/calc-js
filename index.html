@@ -16,7 +16,7 @@
 </head>
 
 <body class="flex items-center justify-center h-screen bg-gray-200 dark:bg-slate-900 popins">
-  <div class="bodyCalc max-w-xs w-full max-h-[560px] h-full  bg-bodyLinear rounded-3xl shadow-2xl dark:shadow-2xl text-nowrap">
+  <div class="bodyCalc sm:max-w-xs w-full sm:max-h-[560px] h-full  bg-bodyLinear sm:rounded-3xl shadow-2xl dark:shadow-2xl text-nowrap">
     <!-- Display -->
     <div class="w-full flex justify-between p-4 text-md items-center">
       <button onclick="hideBtn(this)" class="uil uil-redo dark:text-slate-50 font-medium">
@@ -61,24 +61,28 @@
         </label>
       </div>
     </div>
+
+    <!-- history start -->
     <div class="historySection hidden">
       <h1 class="text-md font-medium px-4 pb-4 dark:text-slate-50">history:</h1>
-      <div class="history px-5 dark:text-slate-50 font-medium text-base overflow-hidden">
-      
-      </div>
+      <div class="history px-5 break-words text-wrap dark:text-slate-50 font-medium text-base overflow-hidden"></div>
     </div>
-    <div class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 pt-12 px-4 box-border overflow-hidden">
-      <div class="numberContent text-wrap">0</div>
-    </div>
-    <div class="font-semibold dark:text-slate-50 text-gray-800 px-4 pb-4 flex justify-between">
-      <div class="text-md"><span class="hidden equals">&equals;</span></div>
-      <div class="result text-2xl">0</div>
-    </div>
+    <!-- history end -->
 
-    <!-- Buttons -->
-    <div class="w-full displayCal flex bg-linear rounded-3xl shadow-sm">
-      <div class="grid grid-cols-3 gap-2 rounded-2xl w-[80%] p-4">
-        <div class="flex col-span-3 justify-between w-[214px] rounded-full bg-white/[30%] dark:bg-black/[30%]">
+    <!-- result start -->
+    <div class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 pt-12 px-4">
+      <div class="numberContent text-wrap break-words">0</div>
+    </div>
+    <div class="font-semibold dark:text-slate-50 text-gray-800 px-4 pb-4 flex justify-between overflow-hidden">
+      <div class="text-md"><span class="hidden equals">&equals;</span></div>
+      <div class="result text-2xl text-wrap break-words">0</div>
+    </div>
+    <!-- result end -->
+    
+    <!--  Buttons start -->
+    <div class="w-full displayCal flex sm:static absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm">
+      <div class="grid grid-cols-3 gap-2 rounded-2xl sm:w-[80%] w-[90%] p-4 sm:ml-0 ml-4">
+        <div class="flex col-span-3 justify-between sm:w-[214px] w-full rounded-full bg-white/[30%] dark:bg-black/[30%]">
           <button class="cardAction" onclick="removeNumber()">AC</button>
           <button class="cardAction">+/-</button>
           <button class="cardAction" onclick="calculatePercentage()">%</button>
@@ -103,7 +107,7 @@
         <button class="cardNumber"onclick="setNumber('00')">00</button>
         <button class="cardNumber" onclick="setNumber('.')">.</button>
       </div>
-      <div class="flex h-full col-span-1 gap-2 w-[20%] justify-between bg-white/[30%] dark:bg-black/[30%] rounded-full mr-4 my-4 flex-wrap">
+      <div class="flex h-full col-span-1 gap-2 w-[20%] justify-between bg-white/[30%] dark:bg-black/[30%] rounded-full sm:mr-4 my-4 mr-8 flex-wrap">
         <button class="cardAction" onclick="setOperation('/')">&div;</button>
         <button class="cardAction" onclick="setOperation('*')">&times;</button>
         <button class="cardAction" onclick="setOperation('-')">&minus;</button>
