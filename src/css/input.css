@@ -28,8 +28,20 @@
   @apply text-gray-800 dark:text-slate-50 size-[64px] rounded-full font-semibold hover:bg-white/[20%]
 }
 
+.cardActionExc{
+  @apply text-gray-800 dark:text-slate-50 size-36 rounded-full font-semibold hover:bg-white/[20%]
+}
+
 .activeDark{
   @apply bg-[#D8EEFF] dark:bg-[#003661]
+}
+
+.fromCurrency {
+  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50;
+}
+
+.toCurrency {
+  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50;
 }
 
 
@@ -39,4 +51,24 @@
 
 .card{
   @apply bg-[#373737]
+}
+
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+
+
+/* Handle */
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

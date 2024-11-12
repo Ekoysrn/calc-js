@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange Rate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./public/css/output.css">
+
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-200 dark:bg-slate-900 popins overflow-hidden">
+  <div
+    class="bodyCalc sm:max-w-xs w-full sm:max-h-[560px] h-screen  bg-bodyLinear sm:rounded-3xl shadow-2xl dark:shadow-2xl text-nowrap relative">
+    <!-- Display -->
+    <div class="w-full flex justify-between p-4 text-md items-center">
+      </button>
+      <div class="flex justify-center cursor-pointer dark:text-slate-50">
+        <a href="index.html">calculator</a>
+        <span class="mx-2">|</span>
+        <a href="exc.html"
+          class="border-b-[1px] border-slate-950 dark:border-b-[1px] dark:border-slate-100">exchange rate</a>
+      </div>
+      <div>
+        <label class="grid cursor-pointer place-items-center bg-[#A9DCFD] dark:bg-[#1B6A9C] rounded-full">
+          <input type="checkbox"
+            class="toggle hidden theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+          <div class="sun col-start-1 dark:text-slate-50 activeDark rounded-full row-start-1 p-1">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+          </div>
+          <div class="moon col-start-2 dark:text-slate-50 rounded-full row-start-1 p-1">
+            <svg class="stroke-base-100 fill-base-100 " xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- from currency converter start -->
+    <div id="from"
+      class="bg-transparent absolute top-28 hidden left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
+      <ul class="overflow-y-scroll h-32 w-ful px-4">
+        <li class="fromCurrency" value="USD">USD</li>
+        <li class="fromCurrency" value="IDR">IDR</li>
+        <li class="fromCurrency" value="AED">AED</li>
+        <li class="fromCurrency" value="ARS">ARS</li>
+        <li class="fromCurrency" value="AUD">AUD</li>
+        <li class="fromCurrency" value="BGN">BGN</li>
+        <li class="fromCurrency" value="BRL">BRL</li>
+        <li class="fromCurrency" value="BSD">BSD</li>
+        <li class="fromCurrency" value="CAD">CAD</li>
+        <li class="fromCurrency" value="CHF">CHF</li>
+        <li class="fromCurrency" value="CLP">CLP</li>
+        <li class="fromCurrency" value="CNY">CNY</li>
+        <li class="fromCurrency" value="COP">COP</li>
+        <li class="fromCurrency" value="CZK">CZK</li>
+        <li class="fromCurrency" value="DKK">DKK</li>
+        <li class="fromCurrency" value="DOP">DOP</li>
+        <li class="fromCurrency" value="EGP">EGP</li>
+        <li class="fromCurrency" value="EUR">EUR</li>
+        <li class="fromCurrency" value="FJD">FJD</li>
+        <li class="fromCurrency" value="GBP">GBP</li>
+        <li class="fromCurrency" value="GTQ">GTQ</li>
+        <li class="fromCurrency" value="HKD">HKD</li>
+        <li class="fromCurrency" value="HRK">HRK</li>
+        <li class="fromCurrency" value="HUF">HUF</li>
+        <li class="fromCurrency" value="INR">INR</li>
+        <li class="fromCurrency" value="ISK">ISK</li>
+        <li class="fromCurrency" value="JPY">JPY</li>
+        <li class="fromCurrency" value="KRW">KRW</li>
+        <li class="fromCurrency" value="KZT">KZT</li>
+        <li class="fromCurrency" value="MVR">MVR</li>
+        <li class="fromCurrency" value="MXN">MXN</li>
+        <li class="fromCurrency" value="MYR">MYR</li>
+        <li class="fromCurrency" value="NOK">NOK</li>
+        <li class="fromCurrency" value="NZD">NZD</li>
+        <li class="fromCurrency" value="PAB">PAB</li>
+        <li class="fromCurrency" value="PEN">PEN</li>
+        <li class="fromCurrency" value="PHP">PHP</li>
+        <li class="fromCurrency" value="PKR">PKR</li>
+        <li class="fromCurrency" value="PLN">PLN</li>
+        <li class="fromCurrency" value="PYG">PYG</li>
+        <li class="fromCurrency" value="RON">RON</li>
+        <li class="fromCurrency" value="RUB">RUB</li>
+        <li class="fromCurrency" value="SAR">SAR</li>
+        <li class="fromCurrency" value="SEK">SEK</li>
+        <li class="fromCurrency" value="SGD">SGD</li>
+        <li class="fromCurrency" value="THB">THB</li>
+        <li class="fromCurrency" value="TRY">TRY</li>
+        <li class="fromCurrency" value="TWD">TWD</li>
+        <li class="fromCurrency" value="UAH">UAH</li>
+        <li class="fromCurrency" value="UYU">UYU</li>
+        <li class="fromCurrency" value="ZAR">ZAR</li>
+      </ul>
+    </div>
+    <!-- from currency converter end -->
+
+    <!-- to currency converter start -->
+    <div id="to"
+      class="bg-transparent hidden absolute top-48  left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
+      <ul class="overflow-y-scroll h-32 w-ful px-4">
+        <li class="toCurrency" value="IDR">IDR</li>
+        <li class="toCurrency" value="USD">USD</li>
+        <li class="toCurrency" value="AED">AED</li>
+        <li class="toCurrency" value="ARS">ARS</li>
+        <li class="toCurrency" value="AUD">AUD</li>
+        <li class="toCurrency" value="BGN">BGN</li>
+        <li class="toCurrency" value="BRL">BRL</li>
+        <li class="toCurrency" value="BSD">BSD</li>
+        <li class="toCurrency" value="CAD">CAD</li>
+        <li class="toCurrency" value="CHF">CHF</li>
+        <li class="toCurrency" value="CLP">CLP</li>
+        <li class="toCurrency" value="CNY">CNY</li>
+        <li class="toCurrency" value="COP">COP</li>
+        <li class="toCurrency" value="CZK">CZK</li>
+        <li class="toCurrency" value="DKK">DKK</li>
+        <li class="toCurrency" value="DOP">DOP</li>
+        <li class="toCurrency" value="EGP">EGP</li>
+        <li class="toCurrency" value="EUR">EUR</li>
+        <li class="toCurrency" value="FJD">FJD</li>
+        <li class="toCurrency" value="GBP">GBP</li>
+        <li class="toCurrency" value="GTQ">GTQ</li>
+        <li class="toCurrency" value="HKD">HKD</li>
+        <li class="toCurrency" value="HRK">HRK</li>
+        <li class="toCurrency" value="HUF">HUF</li>
+        <li class="toCurrency" value="INR">INR</li>
+        <li class="toCurrency" value="ISK">ISK</li>
+        <li class="toCurrency" value="JPY">JPY</li>
+        <li class="toCurrency" value="KRW">KRW</li>
+        <li class="toCurrency" value="KZT">KZT</li>
+        <li class="toCurrency" value="MVR">MVR</li>
+        <li class="toCurrency" value="MXN">MXN</li>
+        <li class="toCurrency" value="MYR">MYR</li>
+        <li class="toCurrency" value="NOK">NOK</li>
+        <li class="toCurrency" value="NZD">NZD</li>
+        <li class="toCurrency" value="PAB">PAB</li>
+        <li class="toCurrency" value="PEN">PEN</li>
+        <li class="toCurrency" value="PHP">PHP</li>
+        <li class="toCurrency" value="PKR">PKR</li>
+        <li class="toCurrency" value="PLN">PLN</li>
+        <li class="toCurrency" value="PYG">PYG</li>
+        <li class="toCurrency" value="RON">RON</li>
+        <li class="toCurrency" value="RUB">RUB</li>
+        <li class="toCurrency" value="SAR">SAR</li>
+        <li class="toCurrency" value="SEK">SEK</li>
+        <li class="toCurrency" value="SGD">SGD</li>
+        <li class="toCurrency" value="THB">THB</li>
+        <li class="toCurrency" value="TRY">TRY</li>
+        <li class="toCurrency" value="TWD">TWD</li>
+        <li class="toCurrency" value="UAH">UAH</li>
+        <li class="toCurrency" value="UYU">UYU</li>
+        <li class="toCurrency" value="ZAR">ZAR</li>
+      </ul>
+    </div>
+    <!-- to currency converter end -->
+
+    <!-- result start -->
+    <div
+      class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 sm:pt-4 pt-16 px-4 flex justify-between items-center cursor-pointer">
+      <div id="fromBtn" class="flex items-center justify-center">
+        <img src="./src/images/united-states.png" class="size-8 mr-2" alt="">
+        <p><span class="fromText">From currency</span> <span>&gt;</span></p>
+      </div>
+      <div class="numberContent text-wrap break-words overflow-hidden">0</div>
+    </div>
+    <div
+      class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 pt-12 px-4 flex justify-between items-center cursor-pointer">
+      <div id="toBtn" class="flex items-center justify-center">
+        <img src="./src/images/indonesia.png" class="size-8 mr-2" alt="">
+        <p><span class="toText">To currency</span> <span>&gt;</span></p>
+      </div>
+      <div class="resultContent text-wrap break-words overflow-hidden">0</div>
+    </div>
+
+    <!-- result end -->
+
+    <!--  Buttons start -->
+    <div
+      class="w-full displayCal flex  absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm  animate__animated animate__fadeInUp">
+      <div class="grid grid-cols-3 gap-2 rounded-2xl sm:w-[80%] w-[90%] p-4 sm:ml-0 ml-4">
+
+        <button class="cardNumber" onclick="setNumber('7')">7</button>
+        <button class="cardNumber" onclick="setNumber('8')">8</button>
+        <button class="cardNumber" onclick="setNumber('9')">9</button>
+
+
+        <button class="cardNumber" onclick="setNumber('4')">4</button>
+        <button class="cardNumber" onclick="setNumber('5')">5</button>
+        <button class="cardNumber" onclick="setNumber('6')">6</button>
+
+
+        <button class="cardNumber" onclick="setNumber('1')">1</button>
+        <button class="cardNumber" onclick="setNumber('2')">2</button>
+        <button class="cardNumber" onclick="setNumber('3')">3</button>
+
+
+        <button class="cardNumber" onclick="setNumber('0')">0</button>
+        <button class="cardNumber" onclick="setNumber('00')">00</button>
+        <button class="cardNumber" onclick="setNumber('.')">.</button>
+      </div>
+      <div
+        class="flex h-[314] col-span-1 gap-2 w-[20%] justify-between bg-white/[30%] dark:bg-black/[30%] rounded-full sm:mr-4 my-4 mr-8 flex-wrap">
+        <button class="cardActionExc" id="convert" onclick="convertCurrency()"><i class="uil uil-enter text-2xl"></i></button>
+        <button class="cardActionExc" onclick="removeNumber()"><i class="uil uil-backspace text-2xl"></i></button>
+      </div>
+    </div>
+  </div>
+  <script src="./src/js/exc.js"></script>
+</body>
+
+</html>
