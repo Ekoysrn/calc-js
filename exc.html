@@ -53,118 +53,432 @@
 
     <!-- from currency converter start -->
     <div id="from"
-      class="bg-transparent absolute top-28 hidden left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
-      <ul class="overflow-y-scroll h-32 w-ful px-4">
-        <li class="fromCurrency" value="USD">USD</li>
-        <li class="fromCurrency" value="IDR">IDR</li>
-        <li class="fromCurrency" value="AED">AED</li>
-        <li class="fromCurrency" value="ARS">ARS</li>
-        <li class="fromCurrency" value="AUD">AUD</li>
-        <li class="fromCurrency" value="BGN">BGN</li>
-        <li class="fromCurrency" value="BRL">BRL</li>
-        <li class="fromCurrency" value="BSD">BSD</li>
-        <li class="fromCurrency" value="CAD">CAD</li>
-        <li class="fromCurrency" value="CHF">CHF</li>
-        <li class="fromCurrency" value="CLP">CLP</li>
-        <li class="fromCurrency" value="CNY">CNY</li>
-        <li class="fromCurrency" value="COP">COP</li>
-        <li class="fromCurrency" value="CZK">CZK</li>
-        <li class="fromCurrency" value="DKK">DKK</li>
-        <li class="fromCurrency" value="DOP">DOP</li>
-        <li class="fromCurrency" value="EGP">EGP</li>
-        <li class="fromCurrency" value="EUR">EUR</li>
-        <li class="fromCurrency" value="FJD">FJD</li>
-        <li class="fromCurrency" value="GBP">GBP</li>
-        <li class="fromCurrency" value="GTQ">GTQ</li>
-        <li class="fromCurrency" value="HKD">HKD</li>
-        <li class="fromCurrency" value="HRK">HRK</li>
-        <li class="fromCurrency" value="HUF">HUF</li>
-        <li class="fromCurrency" value="INR">INR</li>
-        <li class="fromCurrency" value="ISK">ISK</li>
-        <li class="fromCurrency" value="JPY">JPY</li>
-        <li class="fromCurrency" value="KRW">KRW</li>
-        <li class="fromCurrency" value="KZT">KZT</li>
-        <li class="fromCurrency" value="MVR">MVR</li>
-        <li class="fromCurrency" value="MXN">MXN</li>
-        <li class="fromCurrency" value="MYR">MYR</li>
-        <li class="fromCurrency" value="NOK">NOK</li>
-        <li class="fromCurrency" value="NZD">NZD</li>
-        <li class="fromCurrency" value="PAB">PAB</li>
-        <li class="fromCurrency" value="PEN">PEN</li>
-        <li class="fromCurrency" value="PHP">PHP</li>
-        <li class="fromCurrency" value="PKR">PKR</li>
-        <li class="fromCurrency" value="PLN">PLN</li>
-        <li class="fromCurrency" value="PYG">PYG</li>
-        <li class="fromCurrency" value="RON">RON</li>
-        <li class="fromCurrency" value="RUB">RUB</li>
-        <li class="fromCurrency" value="SAR">SAR</li>
-        <li class="fromCurrency" value="SEK">SEK</li>
-        <li class="fromCurrency" value="SGD">SGD</li>
-        <li class="fromCurrency" value="THB">THB</li>
-        <li class="fromCurrency" value="TRY">TRY</li>
-        <li class="fromCurrency" value="TWD">TWD</li>
-        <li class="fromCurrency" value="UAH">UAH</li>
-        <li class="fromCurrency" value="UYU">UYU</li>
-        <li class="fromCurrency" value="ZAR">ZAR</li>
+      class="bg-transparent absolute sm:top-28 hidden top-40 left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
+      <ul class="overflow-y-scroll h-32 w-full px-4">
+        <li class="fromCurrency" value="USD">
+          <img src="./src/images/USD.png" class="size-6 mr-2" alt="">
+          <span>United States Dollar</span>
+        </li>
+        <li class="fromCurrency" value="IDR">
+          <img src="./src/images/IDR.png" class="size-6 mr-2" alt="">
+          <span>Indonesian Rupiah</span>
+        </li>
+        <li class="fromCurrency" value="AED">
+          <img src="./src/images/AED.png" class="size-6 mr-2" alt="">
+          <span>UAE Dirham</span>
+        </li>
+        <li class="fromCurrency" value="ARS">
+          <img src="./src/images/ARS.png" class="size-6 mr-2" alt="">
+          <span>Argentine Peso</span>
+        </li>
+        <li class="fromCurrency" value="AUD">
+          <img src="./src/images/AUD.png" class="size-6 mr-2" alt="">
+          <span>Australian Dollar</span>
+        </li>
+        <li class="fromCurrency" value="BGN">
+          <img src="./src/images/BGN.png" class="size-6 mr-2" alt="">
+          <span>Bulgarian Lev</span>
+        </li>
+        <li class="fromCurrency" value="BRL">
+          <img src="./src/images/BRL.png" class="size-6 mr-2" alt="">
+          <span>Brazilian Real</span>
+        </li>
+        <li class="fromCurrency" value="BSD">
+          <img src="./src/images/BSD.png" class="size-6 mr-2" alt="">
+          <span>Bahamian Dollar</span>
+        </li>
+        <li class="fromCurrency" value="CAD">
+          <img src="./src/images/CAD.png" class="size-6 mr-2" alt="">
+          <span>Canadian Dollar</span>
+        </li>
+        <li class="fromCurrency" value="CHF">
+          <img src="./src/images/CHF.png" class="size-6 mr-2" alt="">
+          <span>Swiss Franc</span>
+        </li>
+        <li class="fromCurrency" value="CLP">
+          <img src="./src/images/CLP.png" class="size-6 mr-2" alt="">
+          <span>Chilean Peso</span>
+        </li>
+        <li class="fromCurrency" value="CNY">
+          <img src="./src/images/CNY.png" class="size-6 mr-2" alt="">
+          <span>Chinese Yuan</span>
+        </li>
+        <li class="fromCurrency" value="COP">
+          <img src="./src/images/COP.png" class="size-6 mr-2" alt="">
+          <span>Colombian Peso</span>
+        </li>
+        <li class="fromCurrency" value="CZK">
+          <img src="./src/images/CZK.png" class="size-6 mr-2" alt="">
+          <span>Czech Koruna</span>
+        </li>
+        <li class="fromCurrency" value="DKK">
+          <img src="./src/images/DKK.png" class="size-6 mr-2" alt="">
+          <span>Danish Krone</span>
+        </li>
+        <li class="fromCurrency" value="DOP">
+          <img src="./src/images/DOP.png" class="size-6 mr-2" alt="">
+          <span>Dominican Peso</span>
+        </li>
+        <li class="fromCurrency" value="EGP">
+          <img src="./src/images/EGP.png" class="size-6 mr-2" alt="">
+          <span>Egyptian Pound</span>
+        </li>
+        <li class="fromCurrency" value="EUR">
+          <img src="./src/images/EUR.png" class="size-6 mr-2" alt="">
+          <span>Euro</span>
+        </li>
+        <li class="fromCurrency" value="FJD">
+          <img src="./src/images/FJD.png" class="size-6 mr-2" alt="">
+          <span>Fiji Dollar</span>
+        </li>
+        <li class="fromCurrency" value="GBP">
+          <img src="./src/images/GBP.png" class="size-6 mr-2" alt="">
+          <span>Pound Sterling</span>
+        </li>
+        <li class="fromCurrency" value="GTQ">
+          <img src="./src/images/GTQ.png" class="size-6 mr-2" alt="">
+          <span>Guatemalan Quetzal</span>
+        </li>
+        <li class="fromCurrency" value="HKD">
+          <img src="./src/images/HKD.png" class="size-6 mr-2" alt="">
+          <span>Hong Kong Dollar</span>
+        </li>
+        <li class="fromCurrency" value="HRK">
+          <img src="./src/images/HRK.png" class="size-6 mr-2" alt="">
+          <span>Croatian Kuna</span>
+        </li>
+        <li class="fromCurrency" value="HUF">
+          <img src="./src/images/HUF.png" class="size-6 mr-2" alt="">
+          <span>Hungarian Forint</span>
+        </li>
+        <li class="fromCurrency" value="INR">
+          <img src="./src/images/INR.png" class="size-6 mr-2" alt="">
+          <span>Indian Rupee</span>
+        </li>
+        <li class="fromCurrency" value="ISK">
+          <img src="./src/images/ISK.png" class="size-6 mr-2" alt="">
+          <span>Icelandic Króna</span>
+        </li>
+        <li class="fromCurrency" value="JPY">
+          <img src="./src/images/JPY.png" class="size-6 mr-2" alt="">
+          <span>Japanese Yen</span>
+        </li>
+        <li class="fromCurrency" value="KRW">
+          <img src="./src/images/KRW.png" class="size-6 mr-2" alt="">
+          <span>South Korean Won</span>
+        </li>
+        <li class="fromCurrency" value="KZT">
+          <img src="./src/images/KZT.png" class="size-6 mr-2" alt="">
+          <span>Kazakhstani Tenge</span>
+        </li>
+        <li class="fromCurrency" value="MVR">
+          <img src="./src/images/MVR.png" class="size-6 mr-2" alt="">
+          <span>Maldivian Rufiyaa</span>
+        </li>
+        <li class="fromCurrency" value="MXN">
+          <img src="./src/images/MXN.png" class="size-6 mr-2" alt="">
+          <span>Mexican Peso</span>
+        </li>
+        <li class="fromCurrency" value="MYR">
+          <img src="./src/images/MYR.png" class="size-6 mr-2" alt="">
+          <span>Malaysian Ringgit</span>
+        </li>
+        <li class="fromCurrency" value="NOK">
+          <img src="./src/images/NOK.png" class="size-6 mr-2" alt="">
+          <span>Norwegian Krone</span>
+        </li>
+        <li class="fromCurrency" value="NZD">
+          <img src="./src/images/NZD.png" class="size-6 mr-2" alt="">
+          <span>New Zealand Dollar</span>
+        </li>
+        <li class="fromCurrency" value="PAB">
+          <img src="./src/images/PAB.png" class="size-6 mr-2" alt="">
+          <span>Panamanian Balboa</span>
+        </li>
+        <li class="fromCurrency" value="PEN">
+          <img src="./src/images/PEN.png" class="size-6 mr-2" alt="">
+          <span>Peruvian Sol</span>
+        </li>
+        <li class="fromCurrency" value="PHP">
+          <img src="./src/images/PHP.png" class="size-6 mr-2" alt="">
+          <span>Philippine Peso</span>
+        </li>
+        <li class="fromCurrency" value="PKR">
+          <img src="./src/images/PKR.png" class="size-6 mr-2" alt="">
+          <span>Pakistani Rupee</span>
+        </li>
+        <li class="fromCurrency" value="PLN">
+          <img src="./src/images/PLN.png" class="size-6 mr-2" alt="">
+          <span>Polish Złoty</span>
+        </li>
+        <li class="fromCurrency" value="PYG">
+          <img src="./src/images/PYG.png" class="size-6 mr-2" alt="">
+          <span>Paraguayan Guaraní</span>
+        </li>
+        <li class="fromCurrency" value="RON">
+          <img src="./src/images/RON.png" class="size-6 mr-2" alt="">
+          <span>Romanian Leu</span>
+        </li>
+        <li class="fromCurrency" value="RUB">
+          <img src="./src/images/RUB.png" class="size-6 mr-2" alt="">
+          <span>Russian Ruble</span>
+        </li>
+        <li class="fromCurrency" value="SAR">
+          <img src="./src/images/SAR.png" class="size-6 mr-2" alt="">
+          <span>Saudi Riyal</span>
+        </li>
+        <li class="fromCurrency" value="SEK">
+          <img src="./src/images/SEK.png" class="size-6 mr-2" alt="">
+          <span>Swedish Krona</span>
+        </li>
+        <li class="fromCurrency" value="SGD">
+          <img src="./src/images/SGD.png" class="size-6 mr-2" alt="">
+          <span>Singapore Dollar</span>
+        </li>
+        <li class="fromCurrency" value="THB">
+          <img src="./src/images/THB.png" class="size-6 mr-2" alt="">
+          <span>Thai Baht</span>
+        </li>
+        <li class="fromCurrency" value="TRY">
+          <img src="./src/images/TRY.png" class="size-6 mr-2" alt="">
+          <span>Turkish Lira</span>
+        </li>
+        <li class="fromCurrency" value="TWD">
+          <img src="./src/images/TWD.png" class="size-6 mr-2" alt="">
+          <span>New Taiwan Dollar</span>
+        </li>
+        <li class="fromCurrency" value="UAH">
+          <img src="./src/images/UAH.png" class="size-6 mr-2" alt="">
+          <span>Ukrainian Hryvnia</span>
+        </li>
+        <li class="fromCurrency" value="UYU">
+          <img src="./src/images/UYU.png" class="size-6 mr-2" alt="">
+          <span>Uruguayan Peso</span>
+        </li>
+        <li class="fromCurrency" value="ZAR">
+          <img src="./src/images/ZAR.png" class="size-6 mr-2" alt="">
+          <span>South African Rand</span>
+        </li>
+        <li class="fromCurrency" value="ZWL">
+          <img src="./src/images/ZWL.png" class="size-6 mr-2" alt="">
+          <span>Zimbabwean Dollar</span>
+        </li>
       </ul>
     </div>
     <!-- from currency converter end -->
 
     <!-- to currency converter start -->
     <div id="to"
-      class="bg-transparent hidden absolute top-48  left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
-      <ul class="overflow-y-scroll h-32 w-ful px-4">
-        <li class="toCurrency" value="IDR">IDR</li>
-        <li class="toCurrency" value="USD">USD</li>
-        <li class="toCurrency" value="AED">AED</li>
-        <li class="toCurrency" value="ARS">ARS</li>
-        <li class="toCurrency" value="AUD">AUD</li>
-        <li class="toCurrency" value="BGN">BGN</li>
-        <li class="toCurrency" value="BRL">BRL</li>
-        <li class="toCurrency" value="BSD">BSD</li>
-        <li class="toCurrency" value="CAD">CAD</li>
-        <li class="toCurrency" value="CHF">CHF</li>
-        <li class="toCurrency" value="CLP">CLP</li>
-        <li class="toCurrency" value="CNY">CNY</li>
-        <li class="toCurrency" value="COP">COP</li>
-        <li class="toCurrency" value="CZK">CZK</li>
-        <li class="toCurrency" value="DKK">DKK</li>
-        <li class="toCurrency" value="DOP">DOP</li>
-        <li class="toCurrency" value="EGP">EGP</li>
-        <li class="toCurrency" value="EUR">EUR</li>
-        <li class="toCurrency" value="FJD">FJD</li>
-        <li class="toCurrency" value="GBP">GBP</li>
-        <li class="toCurrency" value="GTQ">GTQ</li>
-        <li class="toCurrency" value="HKD">HKD</li>
-        <li class="toCurrency" value="HRK">HRK</li>
-        <li class="toCurrency" value="HUF">HUF</li>
-        <li class="toCurrency" value="INR">INR</li>
-        <li class="toCurrency" value="ISK">ISK</li>
-        <li class="toCurrency" value="JPY">JPY</li>
-        <li class="toCurrency" value="KRW">KRW</li>
-        <li class="toCurrency" value="KZT">KZT</li>
-        <li class="toCurrency" value="MVR">MVR</li>
-        <li class="toCurrency" value="MXN">MXN</li>
-        <li class="toCurrency" value="MYR">MYR</li>
-        <li class="toCurrency" value="NOK">NOK</li>
-        <li class="toCurrency" value="NZD">NZD</li>
-        <li class="toCurrency" value="PAB">PAB</li>
-        <li class="toCurrency" value="PEN">PEN</li>
-        <li class="toCurrency" value="PHP">PHP</li>
-        <li class="toCurrency" value="PKR">PKR</li>
-        <li class="toCurrency" value="PLN">PLN</li>
-        <li class="toCurrency" value="PYG">PYG</li>
-        <li class="toCurrency" value="RON">RON</li>
-        <li class="toCurrency" value="RUB">RUB</li>
-        <li class="toCurrency" value="SAR">SAR</li>
-        <li class="toCurrency" value="SEK">SEK</li>
-        <li class="toCurrency" value="SGD">SGD</li>
-        <li class="toCurrency" value="THB">THB</li>
-        <li class="toCurrency" value="TRY">TRY</li>
-        <li class="toCurrency" value="TWD">TWD</li>
-        <li class="toCurrency" value="UAH">UAH</li>
-        <li class="toCurrency" value="UYU">UYU</li>
-        <li class="toCurrency" value="ZAR">ZAR</li>
+      class="bg-transparent hidden absolute sm:top-48 top-60 left-10 rounded-lg border-slate-400 backdrop-blur-2xl  animate__animated animate__fadeIn z-[999] dark:text-slate-50">
+      <ul class="overflow-y-scroll h-32 w-full px-4">
+        <li class="toCurrency" value="USD">
+          <img src="./src/images/USD.png" class="size-6 mr-2" alt="">
+          <span>United States Dollar</span>
+        </li>
+        <li class="toCurrency" value="IDR">
+          <img src="./src/images/IDR.png" class="size-6 mr-2" alt="">
+          <span>Indonesian Rupiah</span>
+        </li>
+        <li class="toCurrency" value="AED">
+          <img src="./src/images/AED.png" class="size-6 mr-2" alt="">
+          <span>UAE Dirham</span>
+        </li>
+        <li class="toCurrency" value="ARS">
+          <img src="./src/images/ARS.png" class="size-6 mr-2" alt="">
+          <span>Argentine Peso</span>
+        </li>
+        <li class="toCurrency" value="AUD">
+          <img src="./src/images/AUD.png" class="size-6 mr-2" alt="">
+          <span>Australian Dollar</span>
+        </li>
+        <li class="toCurrency" value="BGN">
+          <img src="./src/images/BGN.png" class="size-6 mr-2" alt="">
+          <span>Bulgarian Lev</span>
+        </li>
+        <li class="toCurrency" value="BRL">
+          <img src="./src/images/BRL.png" class="size-6 mr-2" alt="">
+          <span>Brazilian Real</span>
+        </li>
+        <li class="toCurrency" value="BSD">
+          <img src="./src/images/BSD.png" class="size-6 mr-2" alt="">
+          <span>Bahamian Dollar</span>
+        </li>
+        <li class="toCurrency" value="CAD">
+          <img src="./src/images/CAD.png" class="size-6 mr-2" alt="">
+          <span>Canadian Dollar</span>
+        </li>
+        <li class="toCurrency" value="CHF">
+          <img src="./src/images/CHF.png" class="size-6 mr-2" alt="">
+          <span>Swiss Franc</span>
+        </li>
+        <li class="toCurrency" value="CLP">
+          <img src="./src/images/CLP.png" class="size-6 mr-2" alt="">
+          <span>Chilean Peso</span>
+        </li>
+        <li class="toCurrency" value="CNY">
+          <img src="./src/images/CNY.png" class="size-6 mr-2" alt="">
+          <span>Chinese Yuan</span>
+        </li>
+        <li class="toCurrency" value="COP">
+          <img src="./src/images/COP.png" class="size-6 mr-2" alt="">
+          <span>Colombian Peso</span>
+        </li>
+        <li class="toCurrency" value="CZK">
+          <img src="./src/images/CZK.png" class="size-6 mr-2" alt="">
+          <span>Czech Koruna</span>
+        </li>
+        <li class="toCurrency" value="DKK">
+          <img src="./src/images/DKK.png" class="size-6 mr-2" alt="">
+          <span>Danish Krone</span>
+        </li>
+        <li class="toCurrency" value="DOP">
+          <img src="./src/images/DOP.png" class="size-6 mr-2" alt="">
+          <span>Dominican Peso</span>
+        </li>
+        <li class="toCurrency" value="EGP">
+          <img src="./src/images/EGP.png" class="size-6 mr-2" alt="">
+          <span>Egyptian Pound</span>
+        </li>
+        <li class="toCurrency" value="EUR">
+          <img src="./src/images/EUR.png" class="size-6 mr-2" alt="">
+          <span>Euro</span>
+        </li>
+        <li class="toCurrency" value="FJD">
+          <img src="./src/images/FJD.png" class="size-6 mr-2" alt="">
+          <span>Fiji Dollar</span>
+        </li>
+        <li class="toCurrency" value="GBP">
+          <img src="./src/images/GBP.png" class="size-6 mr-2" alt="">
+          <span>Pound Sterling</span>
+        </li>
+        <li class="toCurrency" value="GTQ">
+          <img src="./src/images/GTQ.png" class="size-6 mr-2" alt="">
+          <span>Guatemalan Quetzal</span>
+        </li>
+        <li class="toCurrency" value="HKD">
+          <img src="./src/images/HKD.png" class="size-6 mr-2" alt="">
+          <span>Hong Kong Dollar</span>
+        </li>
+        <li class="toCurrency" value="HRK">
+          <img src="./src/images/HRK.png" class="size-6 mr-2" alt="">
+          <span>Croatian Kuna</span>
+        </li>
+        <li class="toCurrency" value="HUF">
+          <img src="./src/images/HUF.png" class="size-6 mr-2" alt="">
+          <span>Hungarian Forint</span>
+        </li>
+        <li class="toCurrency" value="INR">
+          <img src="./src/images/INR.png" class="size-6 mr-2" alt="">
+          <span>Indian Rupee</span>
+        </li>
+        <li class="toCurrency" value="ISK">
+          <img src="./src/images/ISK.png" class="size-6 mr-2" alt="">
+          <span>Icelandic Króna</span>
+        </li>
+        <li class="toCurrency" value="JPY">
+          <img src="./src/images/JPY.png" class="size-6 mr-2" alt="">
+          <span>Japanese Yen</span>
+        </li>
+        <li class="toCurrency" value="KRW">
+          <img src="./src/images/KRW.png" class="size-6 mr-2" alt="">
+          <span>South Korean Won</span>
+        </li>
+        <li class="toCurrency" value="KZT">
+          <img src="./src/images/KZT.png" class="size-6 mr-2" alt="">
+          <span>Kazakhstani Tenge</span>
+        </li>
+        <li class="toCurrency" value="MVR">
+          <img src="./src/images/MVR.png" class="size-6 mr-2" alt="">
+          <span>Maldivian Rufiyaa</span>
+        </li>
+        <li class="toCurrency" value="MXN">
+          <img src="./src/images/MXN.png" class="size-6 mr-2" alt="">
+          <span>Mexican Peso</span>
+        </li>
+        <li class="toCurrency" value="MYR">
+          <img src="./src/images/MYR.png" class="size-6 mr-2" alt="">
+          <span>Malaysian Ringgit</span>
+        </li>
+        <li class="toCurrency" value="NOK">
+          <img src="./src/images/NOK.png" class="size-6 mr-2" alt="">
+          <span>Norwegian Krone</span>
+        </li>
+        <li class="toCurrency" value="NZD">
+          <img src="./src/images/NZD.png" class="size-6 mr-2" alt="">
+          <span>New Zealand Dollar</span>
+        </li>
+        <li class="toCurrency" value="PAB">
+          <img src="./src/images/PAB.png" class="size-6 mr-2" alt="">
+          <span>Panamanian Balboa</span>
+        </li>
+        <li class="toCurrency" value="PEN">
+          <img src="./src/images/PEN.png" class="size-6 mr-2" alt="">
+          <span>Peruvian Sol</span>
+        </li>
+        <li class="toCurrency" value="PHP">
+          <img src="./src/images/PHP.png" class="size-6 mr-2" alt="">
+          <span>Philippine Peso</span>
+        </li>
+        <li class="toCurrency" value="PKR">
+          <img src="./src/images/PKR.png" class="size-6 mr-2" alt="">
+          <span>Pakistani Rupee</span>
+        </li>
+        <li class="toCurrency" value="PLN">
+          <img src="./src/images/PLN.png" class="size-6 mr-2" alt="">
+          <span>Polish Złoty</span>
+        </li>
+        <li class="toCurrency" value="PYG">
+          <img src="./src/images/PYG.png" class="size-6 mr-2" alt="">
+          <span>Paraguayan Guaraní</span>
+        </li>
+        <li class="toCurrency" value="RON">
+          <img src="./src/images/RON.png" class="size-6 mr-2" alt="">
+          <span>Romanian Leu</span>
+        </li>
+        <li class="toCurrency" value="RUB">
+          <img src="./src/images/RUB.png" class="size-6 mr-2" alt="">
+          <span>Russian Ruble</span>
+        </li>
+        <li class="toCurrency" value="SAR">
+          <img src="./src/images/SAR.png" class="size-6 mr-2" alt="">
+          <span>Saudi Riyal</span>
+        </li>
+        <li class="toCurrency" value="SEK">
+          <img src="./src/images/SEK.png" class="size-6 mr-2" alt="">
+          <span>Swedish Krona</span>
+        </li>
+        <li class="toCurrency" value="SGD">
+          <img src="./src/images/SGD.png" class="size-6 mr-2" alt="">
+          <span>Singapore Dollar</span>
+        </li>
+        <li class="toCurrency" value="THB">
+          <img src="./src/images/THB.png" class="size-6 mr-2" alt="">
+          <span>Thai Baht</span>
+        </li>
+        <li class="toCurrency" value="TRY">
+          <img src="./src/images/TRY.png" class="size-6 mr-2" alt="">
+          <span>Turkish Lira</span>
+        </li>
+        <li class="toCurrency" value="TWD">
+          <img src="./src/images/TWD.png" class="size-6 mr-2" alt="">
+          <span>New Taiwan Dollar</span>
+        </li>
+        <li class="toCurrency" value="UAH">
+          <img src="./src/images/UAH.png" class="size-6 mr-2" alt="">
+          <span>Ukrainian Hryvnia</span>
+        </li>
+        <li class="toCurrency" value="UYU">
+          <img src="./src/images/UYU.png" class="size-6 mr-2" alt="">
+          <span>Uruguayan Peso</span>
+        </li>
+        <li class="toCurrency" value="ZAR">
+          <img src="./src/images/ZAR.png" class="size-6 mr-2" alt="">
+          <span>South African Rand</span>
+        </li>
+        <li class="toCurrency" value="ZWL">
+          <img src="./src/images/ZWL.png" class="size-6 mr-2" alt="">
+          <span>Zimbabwean Dollar</span>
+        </li>
       </ul>
     </div>
     <!-- to currency converter end -->
@@ -173,7 +487,7 @@
     <div
       class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 sm:pt-4 pt-16 px-4 flex justify-between items-center cursor-pointer">
       <div id="fromBtn" class="flex items-center justify-center">
-        <img src="./src/images/united-states.png" class="size-8 mr-2" alt="">
+        <img src="./src/images/currency.png" class="flagFrom size-8 mr-2" alt="">
         <p><span class="fromText">From currency</span> <span>&gt;</span></p>
       </div>
       <div class="numberContent text-wrap break-words overflow-hidden">0</div>
@@ -181,7 +495,7 @@
     <div
       class="text-right dark:text-slate-200 text-md font-semibold text-gray-600 pt-12 px-4 flex justify-between items-center cursor-pointer">
       <div id="toBtn" class="flex items-center justify-center">
-        <img src="./src/images/indonesia.png" class="size-8 mr-2" alt="">
+        <img src="./src/images/currency.png" class="flagTo size-8 mr-2" alt="">
         <p><span class="toText">To currency</span> <span>&gt;</span></p>
       </div>
       <div class="resultContent text-wrap break-words overflow-hidden">0</div>
@@ -191,7 +505,7 @@
 
     <!--  Buttons start -->
     <div
-      class="w-full displayCal flex  absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm  animate__animated animate__fadeInUp">
+      class="w-full displayCal flex  absolute bottom-0 bg-linear sm:rounded-3xl rounded-t-3xl shadow-sm  animate__animated overflow-hidden animate__fadeInUp">
       <div class="grid grid-cols-3 gap-2 rounded-2xl sm:w-[80%] w-[90%] p-4 sm:ml-0 ml-4">
 
         <button class="cardNumber" onclick="setNumber('7')">7</button>

@@ -85,13 +85,16 @@ toBtn.addEventListener("click", () => toggleList(toList));
 const listFromCurrency = document.querySelectorAll(".fromCurrency"),
   fromDisplay = document.querySelector(".fromText"),
   listToCurrency = document.querySelectorAll(".toCurrency"),
-  toDisplay = document.querySelector(".toText");
+  toDisplay = document.querySelector(".toText"),
+  flagFrom = document.querySelector('.flagFrom'),
+  flagTo = document.querySelector('.flagTo');
 
 // get value option
 listFromCurrency.forEach( i => {
   i.addEventListener("click", function () {
     fromDisplay.textContent = this.getAttribute("value");
     resultFrom = this.getAttribute('value');
+    flagFrom.src = `./src/images/${resultFrom}.png`
     toggleList(fromList);
   });
 });
@@ -100,6 +103,7 @@ listToCurrency.forEach( i => {
   i.addEventListener("click", function () {
     toDisplay.textContent = this.getAttribute("value");
     resultTo = this.getAttribute('value');
+    flagTo.src = `./src/images/${resultTo}.png`
     toggleList(toList);
   });
 });

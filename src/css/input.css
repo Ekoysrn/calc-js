@@ -37,11 +37,11 @@
 }
 
 .fromCurrency {
-  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50;
+  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50 flex items-center py-2;
 }
 
 .toCurrency {
-  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50;
+  @apply font-medium hover:text-gray-600 cursor-pointer dark:text-slate-300 dark:hover:text-slate-50 flex items-center py-2;
 }
 
 
